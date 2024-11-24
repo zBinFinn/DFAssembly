@@ -22,7 +22,7 @@ Block Types:
 
 Parameters:
 - Strings: "This is a String"
-- Texts: '<green>This is a Text'
+- Texts: '\<green>This is a Text'
 - Numbers: 2543
 - Vectors: <23 2 5>
 - Variables: 
