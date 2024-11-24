@@ -2,20 +2,21 @@
 ## by zBinFinn
 
 ### Example Syntax:
-FUNCTION "Test";<newline>
-SET_VARIABLE "ParseNumber" (GAME Test, "3");<newline>
-SET_VARIABLE "x" (product, GAME Test, 2);<newline>
-REPEAT "Multiple" (index, product);<newline>
-OPEN_BRACKET_REPEAT;<newline>
-PLAYER_ACTION "SendMessage" (index);<newline>
-CLOSE_BRACKET_REPEAT;<newline>
-PLAYER_ACTION "SendMessage" ('<blue>Vector: ', <2 3 5>, '<newline><gray>String: ', "Hi!", '<newline><red>Number: ', 235);<newline>
+```
+FUNCTION "Test";
+SET_VARIABLE "ParseNumber" (GAME Test, "3");
+SET_VARIABLE "x" (product, GAME Test, 2);
+REPEAT "Multiple" (index, product);
+OPEN_BRACKET_REPEAT;
+PLAYER_ACTION "SendMessage" (index);
+CLOSE_BRACKET_REPEAT;
+PLAYER_ACTION "SendMessage" ('<blue>Vector: ', <2 3 5>, '<gray>String: ', "Hi!", '<red>Number: ', 235);
 
-NEW<newline>
+NEW
 
-PLAYER_EVENT "Join";<newline>
-CALL_FUNCTION "Test";<newline>
-
+PLAYER_EVENT "Join";
+CALL_FUNCTION "Test";
+```
 (NEW means it will create 2 /dfgive commands to seperate the things)
 
 ### This project currently supports:
