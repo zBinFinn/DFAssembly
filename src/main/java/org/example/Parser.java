@@ -47,6 +47,9 @@ public class Parser {
                     data.append(codeBlock.toString());
                     addCommas = true;
                     consume();
+                } else {
+                    ErrUtil.sendError("Missing semicolon");
+                    return "ERR";
                 }
             } else {
                 return "ERROR: Didn't start line with Action";
