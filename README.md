@@ -1,6 +1,12 @@
 # DF Assembly
 ## by zBinFinn
 
+### Usage:
+1. Clone the repository
+2. Put the code you want to compile into the code.dft file
+3. Run the main function of the Main class
+4. Output is in the console :)
+
 ### Example Syntax:
 ```
 FUNCTION "AllSupportedValues";
@@ -24,7 +30,7 @@ NEW
 PLAYER_EVENT "Join";
 CALL_FUNCTION "Test";
 ```
-(NEW means it will create 2 /dfgive commands to seperate the things)
+(NEW means it will create multiple /dfgive commands to seperate the things)
 
 ### This project currently supports:
 Block Types:
