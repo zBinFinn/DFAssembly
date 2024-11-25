@@ -4,6 +4,7 @@ import org.example.token.Token;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URI;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -11,12 +12,7 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
-        if (args.length != 1) {
-            ErrUtil.sendError("Not exactly one argument given :(");
-            return;
-        }
-
-        Path path = Path.of(args[0]);
+        Path path = Path.of("src/main/resources/code.dft");
         boolean exists = Files.exists(path);
 
         if (!exists) {
