@@ -6,6 +6,8 @@
 2. Put the code you want to compile into the code.dft file
 3. Run the main function of the Main class
 4. Output is in the console :)
+5. Copy the commands one at a time from console
+6. Use Codeclient or Millomod with /dfgive clipboard to get the templates!
 
 ### Example Syntax:
 ```
