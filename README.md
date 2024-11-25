@@ -3,14 +3,21 @@
 
 ### Example Syntax:
 ```
+FUNCTION "AllSupportedValues";
+SET_VARIABLE "x" (num[25], str[Test], txt[<green>Text], vec[0 5 2], loc[5 2 3 45 2], snd[1 2 Pling]);
+SET_VARIABLE "x" (var[LINE line], var[LOCAL %default money], var[GAME game], var[SAVE save]);
+SET_VARIABLE "x" (part[Ash "amount":1;"horizontal":0;"vertical":0]);
+
+NEW
+
 FUNCTION "Test";
-SET_VARIABLE "ParseNumber" (GAME Test, "3");
-SET_VARIABLE "x" (product, GAME Test, 2);
-REPEAT "Multiple" (index, product);
+SET_VARIABLE "ParseNumber" (var[GAME Test], str[3]);
+SET_VARIABLE "x" (var[LINE product], var[GAME Test], num[2]);
+REPEAT "Multiple" (var[LINE index], var[LINE product]);
 OPEN_BRACKET_REPEAT;
-PLAYER_ACTION "SendMessage" (index);
+PLAYER_ACTION "SendMessage" (var[LINE index]);
 CLOSE_BRACKET_REPEAT;
-PLAYER_ACTION "SendMessage" ('<blue>Vector: ', <2 3 5>, '<gray>String: ', "Hi!", '<red>Number: ', 235);
+PLAYER_ACTION "SendMessage" (txt[<blue>Vector: ], vec[2 3 5], txt[<newline><gray>String: ], str[Hi!], txt[<newline><red>Number: ], num[235]);
 
 NEW
 
@@ -39,12 +46,12 @@ Block Types:
 - CLOSE_BRACKET_REPEAT
 
 Parameters:
-- Strings: "This is a String"
-- Texts: '\<green>This is a Text'
-- Numbers: 2543
-- Vectors: <23 2 5>
-- Variables: 
-  - GAME Variable
-  - LOCAL Variable
-  - SAVE Variable
-  - Variable (<-- Automatically LINE) 
+- Strings: str[This is a string]
+- Texts: txt['\<green>This is a text]
+- Numbers: num[2543]
+- Vectors: vec[23 2 5]
+- Variables: var[SCOPE variable name]
+- Sounds: snd[Pitch Volume Sound] i.e.
+          snd[1 2 Pling]
+- Particles: part[Particle "data":1;"data2":2]
+- Locations: loc[x y z pitch yaw] i.e. loc[1 5 3 45 5]
