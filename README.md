@@ -24,7 +24,7 @@ NEW
 PLAYER_EVENT "Join";
 CALL_FUNCTION "Test";
 ```
-(NEW means it will create 2 /dfgive commands to seperate the things)
+(NEW means it will create multiple /dfgive commands to seperate the things)
 
 ### This project currently supports:
 Block Types:
