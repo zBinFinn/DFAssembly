@@ -1,6 +1,12 @@
 # DF Assembly
 ## by zBinFinn
 
+### Usage:
+1. Clone the repository
+2. Put the code you want to compile into the code.dft file
+3. Run the main function of the Main class
+4. Output is in the console :)
+
 ### Example Syntax:
 ```
 FUNCTION "AllSupportedValues";
